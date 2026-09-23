@@ -1,12 +1,17 @@
 # Inverse Aerodynamic Design of a Converging-Diverging Nozzle
 
-**Author:** Danial Moghadam  
-**Discipline:** Computational Fluid Dynamics (CFD) & Aerodynamic Shape Optimization
+**Focus:** Computational Fluid Dynamics, inverse design, and aerodynamic shape optimization
 
 ## Overview
 This repository contains an automated inverse-design computational pipeline for optimizing the internal wall geometry of a converging-diverging nozzle. Utilizing a custom-built 1D, incompressible, inviscid flow solver, a Genetic Algorithm (GA) is deployed to manipulate a 7th-degree Bézier curve boundary. 
 
 The optimization objective is to achieve a targeted pressure distribution designed to mimic boundary layer protection mechanisms via a Stratford curve approximation. The framework bypasses non-physical local minima to converge on a fully optimized aerodynamic shape subject to a 2.0-meter packaging constraint.
+
+## Full Report
+
+The complete governing equations, custom solver formulation, analytical validation, target-pressure synthesis, optimization architecture, and final nozzle geometry are documented in the full report:
+
+[Read the complete Inverse Nozzle Design Report](./Report/Inverse_Aerodynamic_Design_of_a_Converging-Diverging_Nozzle.pdf)
 
 ## Key Features & Methodology
 
@@ -36,3 +41,29 @@ By embedding viscous constraints directly into the objective function, the invis
 * **`/1D_Inviscid_Nozzle_Toolkit`**: The isolated 1D Karimian & Schneider solver and the analytical piecewise-parabolic validation script.
 * **`/MATLAB_Optimization`**: The full inverse-design suite, including the Genetic Algorithm wrapper, the Bézier geometry generator, and the parameter independence study.
 * **`/Images`**: Convergence plots, Pareto fronts, and final geometric overlays.
+
+* ## Citation
+
+If you reference or build upon this project, the following BibTeX entry may be used:
+
+```bibtex
+@techreport{moghadam2026inverseNozzle,
+  author      = {Moghadam, Danial},
+  title       = {Inverse Aerodynamic Design of a Converging--Diverging Nozzle: A 1D Inviscid Shape Optimization Study via Genetic Algorithms},
+  institution = {Independent Research},
+  year        = {2026},
+  month       = {August},
+  type        = {Technical Report},
+  url         = {https://github.com/DanMoghadam-Aero/1D-Nozzle-Inverse-Design},
+  note        = {MATLAB implementation and technical report}
+}
+```
+
+
+## Author
+
+**Danial Moghadam**  
+M.Sc. in Aerospace Engineering -- Aerodynamics  
+Independent Research  
+[GitHub Portfolio](https://github.com/DanMoghadam-Aero)  
+Email: [dan998m@gmail.com](mailto:dan998m@gmail.com)
